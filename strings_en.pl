@@ -125,7 +125,7 @@ use constant S_PROXY => 'Error: Open proxy detected.';						# Returns error for 
 use constant S_DUPE => 'Error: This file has already been posted <a href="%s">here</a>.';	# Returns error when an md5 checksum already exists.
 use constant S_DUPENAME => 'Error: A file with the same name already exists.';	# Returns error when an filename already exists.
 use constant S_NOTHREADERR => 'Error: Thread does not exist.';				# Returns error when a non-existant thread is accessed
-use constant S_BADDELPASS => 'Error: Incorrect password for deletion.';		# Returns error for wrong password (when user tries to delete file)
+use constant S_BADDELPASS => 'Error: You can\'t delete other ppl psto.';		# Returns error for wrong password (when user tries to delete file)
 use constant S_WRONGPASS => 'Error: Management password incorrect.';		# Returns error for wrong password (when trying to access Manager modes)
 use constant S_VIRUS => 'Error: Possible virus-infected file.';				# Returns error for malformed files suspected of being virus-infected.
 use constant S_NOTWRITE => 'Error: Could not write to directory.';				# Returns error when the script cannot write to the directory, the chmod (777) is wrong

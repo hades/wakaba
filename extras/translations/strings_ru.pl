@@ -127,7 +127,7 @@ use constant S_PROXY => 'Ошибка: Обнаружен открытый пр�
 use constant S_DUPE => 'Ошибка: Файл уже залит <a href="%s">здесь</a>.';	# Returns error when an md5 checksum already exists.
 use constant S_DUPENAME => 'Ошибка: Файл с тем же именем уже есть.';	# Returns error when an filename already exists.
 use constant S_NOTHREADERR => 'Ошибка: Темы нет.';				# Returns error when a non-existant thread is accessed
-use constant S_BADDELPASS => 'Ошибка: Неверный пароль на удаление.';		# Returns error for wrong password (when user tries to delete file)
+use constant S_BADDELPASS => 'Ошибка: Нельзя удалять чужие псто.';		# Returns error for wrong password (when user tries to delete file)
 use constant S_WRONGPASS => 'Ошибка: Неверный пароль на управление.';		# Returns error for wrong password (when trying to access Manager modes)
 use constant S_VIRUS => 'Ошибка: Файл может быть инфицирован.';				# Returns error for malformed files suspected of being virus-infected.
 use constant S_NOTWRITE => 'Ошибка: Не могу писать в каталог.';				# Returns error when the script cannot write to the directory, the chmod (777) is wrong
