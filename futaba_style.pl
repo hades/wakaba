@@ -79,12 +79,9 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 	<if !$image_inp and !$thread and ALLOW_TEXTONLY>
 		<input type="hidden" name="nofile" value="1" />
 	</if>
-	<if FORCED_ANON><input type="hidden" name="name" /></if>
 	<if SPAM_TRAP><div class="trap"><const S_SPAMTRAP><input type="text" name="name" size="28" autocomplete="off" /><input type="text" name="link" size="28" autocomplete="off" /></div></if>
 
 	<table><tbody>
-	<if !FORCED_ANON><tr><td class="postblock"><const S_NAME></td><td><input type="text" name="field1" size="28" /></td></tr></if>
-	<tr><td class="postblock"><const S_EMAIL></td><td><input type="text" name="field2" size="28" /></td></tr>
 	<tr><td class="postblock"><const S_SUBJECT></td><td><input type="text" name="field3" size="35" />
 	<input type="submit" value="<const S_SUBMIT>" /></td></tr>
 	<tr><td class="postblock"><const S_COMMENT></td><td><textarea name="field4" cols="48" rows="4"></textarea></td></tr>
@@ -101,7 +98,6 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 		</td></tr>
 	</if>
 
-	<tr><td class="postblock"><const S_DELPASS></td><td><input type="password" name="password" size="8" /> <const S_DELEXPL></td></tr>
 	<tr><td colspan="2">
 	<div class="rules">}.include("include/rules.html").q{</div></td></tr>
 	</tbody></table></form></div>
@@ -209,7 +205,6 @@ use constant PAGE_TEMPLATE => compile_template(NORMAL_HEAD_INCLUDE.q{
 <table class="userdelete"><tbody><tr><td>
 <input type="hidden" name="task" value="delete" />
 <const S_REPDEL>[<label><input type="checkbox" name="fileonly" value="on" /><const S_DELPICONLY></label>]<br />
-<const S_DELKEY><input type="password" name="password" size="8" />
 <input value="<const S_DELETE>" type="submit" /></td></tr></tbody></table>
 </form>
 <script type="text/javascript">set_delpass("delform")</script>

@@ -70,12 +70,12 @@ elsif(!$task)
 elsif($task eq "post")
 {
 	my $parent=$query->param("parent");
-	my $name=$query->param("field1");
+    my $name=$ENV{REMOTE_USER};
 	my $email=$query->param("field2");
 	my $subject=$query->param("field3");
 	my $comment=$query->param("field4");
 	my $file=$query->param("file");
-	my $password=$query->param("password");
+	my $password=$name;
 	my $nofile=$query->param("nofile");
 	my $captcha=$query->param("captcha");
 	my $admin=$query->param("admin");
@@ -87,7 +87,7 @@ elsif($task eq "post")
 }
 elsif($task eq "delete")
 {
-	my $password=$query->param("password");
+	my $password=$ENV{REMOTE_USER};
 	my $fileonly=$query->param("fileonly");
 	my $archive=$query->param("archive");
 	my $admin=$query->param("admin");
